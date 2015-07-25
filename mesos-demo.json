@@ -1,0 +1,28 @@
+{
+  "id": "mesos-demo",
+  "cmd": "node mesos_demo/demo.js 8080",
+  "cpus": 0.5,
+  "mem": 64.0,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "jthiatt/mesos-demo"",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 8080, "hostPort": 0, "servicePort": 9000, "protocol": "tcp" }
+      ]
+    }
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "portIndex": 0,
+      "path": "/",
+      "gracePeriodSeconds": 5,
+      "intervalSeconds": 20,
+      "maxConsecutiveFailures": 3
+    }
+  ]
+}
+
