@@ -7,7 +7,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "jthiatt/mesos-demo"",
+      "image": "jthiatt/mesos-demo",
       "network": "BRIDGE",
       "portMappings": [
         { "containerPort": 8080, "hostPort": 0, "servicePort": 9000, "protocol": "tcp" }
