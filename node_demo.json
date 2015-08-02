@@ -1,6 +1,6 @@
 {
   "id": "node-demo",
-  "cmd": "apt-get install git && apt-get install nodejs && git https://github.com/jthiatt/mesos_demo/blob/master/demo.js && nodejs demo.js $PORT",
+  "cmd": "curl -o demo.js https://raw.githubusercontent.com/jthiatt/mesos_demo/master/demo.js && nodejs demo.js $PORT",
   "mem": 128,
   "cpus": 0.5,
   "instances": 1
